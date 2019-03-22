@@ -3,7 +3,9 @@ Show Of Hands
 
 A hand gesture recognition program.
 
-Intended use is to integrate with MPD and let users play their music using a NUI.
+Intended use is to integrate with the Spotify API and let users play their music using a Natual User Interface.
 
 ### Dependencies:
-  - Pygame
+  - simplecv for accesing the camera
+  - pytorch for the machine learning
+  - spotipy for the Spotify API
