@@ -12,9 +12,13 @@ def save_image(img_name):
     cam = None
     
     camlist = pygame.camera.list_cameras()
+
     if camlist:
         cam = pygame.camera.Camera(camlist[0], (640,480), "RGB")
-    
+    else:
+        print("No cameras found. Exiting...")
+        exit(0)
+
     cam.start()
 
     cam.set_controls(False, False, 30)
@@ -26,7 +30,7 @@ def save_image(img_name):
     image = cam.get_image()
     pygame.image.save(image, img_name)
 
-    print cam.get_controls()
+    print(cam.get_controls())
     cam.stop()
 
 if __name__ == "__main__":
